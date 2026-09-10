@@ -1,4 +1,4 @@
-The project used mTLS, sample API for Department module is there to show that mTLS is working. Postman collection can be referred to Spring Boot Int - Users & Department APIs.postman_collection.json
+The project used mTLS, sample API for Department module is there to show that mTLS is working. Postman collection can be referred to Spring Boot Int - Users & Department APIs.postman_collection.json.
 In order to test endpoint from Department module, Users module is needed, unless the mTLS is disabled. Please use endpoint /username/{userName} in Users module to test Department module.
 
 "Disclaimer: For evaluation convenience, the test keystores and truststores are committed inside the src/main/resources folder. In a production cloud deployment, these credentials would be stored in a secure secret manager (like HashiCorp Vault or AWS Secrets Manager) and injected via external file mounts or environment variables."
