@@ -1,4 +1,5 @@
-The project used mTLS, sample API for Department module is there to show that the mTLS is working. 
+The project used SpringBoot 4, Hibernate and mTLS, sample API for Department module is there to show that the mTLS is working.
+The logs for Department and Users module is located in logs folder. 
 Postman collection can be referred to Spring Boot Int - Users & Department APIs.postman_collection.json.
 In order to test endpoint from Department module, Users module is needed, unless the mTLS is disabled. Please use endpoint /username/{userName} in Users module to test Department module.
 

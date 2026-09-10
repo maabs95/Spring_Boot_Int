@@ -18,3 +18,13 @@
 2026-09-10 11:07:01.523 [INFO] RES | 200 | {"data":{"userName":"AliceSmith","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
 2026-09-10 11:07:19.672 [INFO] REQ | GET | /department/getByUsername | 
 2026-09-10 11:07:19.672 [INFO] RES | 200 | {"data":{"userName":"AliceSmithUpdated","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:49:59.671 [INFO] REQ | GET | /department/getByUsername | 
+2026-09-10 11:49:59.671 [INFO] RES | 200 | {"data":{"userName":"AliceSmith","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:50:54.465 [INFO] REQ | GET | /department/getByUsername | 
+2026-09-10 11:50:54.465 [INFO] RES | 403 | {"data":null,"message":"User is not active.","status":"FAILED"}
+2026-09-10 11:51:07.004 [INFO] REQ | GET | /department/getByUsername | 
+2026-09-10 11:51:07.004 [INFO] RES | 200 | {"data":{"userName":"CharlieBrown","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:51:14.912 [INFO] REQ | GET | /department/getByUsername | 
+2026-09-10 11:51:14.913 [INFO] RES | 403 | {"data":null,"message":"User is not active.","status":"FAILED"}
+2026-09-10 15:13:24.670 [INFO] REQ | GET | /department/getByUsername | 
+2026-09-10 15:13:24.670 [INFO] RES | 403 | {"data":null,"message":"User is not active.","status":"FAILED"}

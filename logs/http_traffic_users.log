@@ -134,3 +134,21 @@
 2026-09-10 11:07:01.539 [INFO] RES | 200 | {"data":{"userName":"AliceSmith","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
 2026-09-10 11:07:19.676 [INFO] REQ | GET | /users/username/AliceSmithUpdated | 
 2026-09-10 11:07:19.676 [INFO] RES | 200 | {"data":{"userName":"AliceSmithUpdated","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:49:59.780 [INFO] REQ | GET | /users/username/AliceSmith | 
+2026-09-10 11:49:59.781 [INFO] RES | 200 | {"data":{"userName":"AliceSmith","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:50:11.200 [INFO] REQ | GET | /users/username/BobJohnson | 
+2026-09-10 11:50:11.200 [INFO] RES | 500 | {"data":null,"message":"User not found with username: BobJohnson","status":"FAILED"}
+2026-09-10 11:50:54.472 [INFO] REQ | GET | /users/username/BobJohnson | 
+2026-09-10 11:50:54.472 [INFO] RES | 500 | {"data":null,"message":"403 Forbidden: \"{\"data\":null,\"message\":\"User is not active.\",\"status\":\"FAILED\"}\"","status":"FAILED"}
+2026-09-10 11:51:07.007 [INFO] REQ | GET | /users/username/CharlieBrown | 
+2026-09-10 11:51:07.007 [INFO] RES | 200 | {"data":{"userName":"CharlieBrown","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:51:14.917 [INFO] REQ | GET | /users/username/EvanWright | 
+2026-09-10 11:51:14.917 [INFO] RES | 500 | {"data":null,"message":"403 Forbidden: \"{\"data\":null,\"message\":\"User is not active.\",\"status\":\"FAILED\"}\"","status":"FAILED"}
+2026-09-10 15:13:09.493 [INFO] REQ | POST | /users | {
+  "userName": "AliceSmith",
+  "email": "alice.smith@example.com",
+  "active": true
+}
+2026-09-10 15:13:09.493 [INFO] RES | 409 | {"data":null,"message":"Username 'AliceSmith' is already taken!","status":"FAILED"}
+2026-09-10 15:13:24.701 [INFO] REQ | GET | /users/username/EvanWright | 
+2026-09-10 15:13:24.701 [INFO] RES | 500 | {"data":null,"message":"403 Forbidden: \"{\"data\":null,\"message\":\"User is not active.\",\"status\":\"FAILED\"}\"","status":"FAILED"}
