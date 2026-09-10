@@ -1,6 +1,6 @@
-package com.util.repository;
+package com.util.common.database.repository;
 
-import com.util.model.Users;
+import com.util.common.database.model.Users;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

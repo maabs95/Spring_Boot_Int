@@ -1,7 +1,7 @@
 package com.department.controller;
 
 import com.department.service.DepartmentService;
-import com.util.dto.ResponseDto;
+import com.util.common.dto.ResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

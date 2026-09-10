@@ -1,13 +1,13 @@
 package com.users.mapper;
 
 import com.users.dto.UsersDto;
-import com.util.model.Users;
+import com.util.common.database.model.Users;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-09-10T10:10:33+0800",
+    date = "2026-09-10T10:32:36+0800",
     comments = "version: 1.6.3, compiler: javac, environment: Java 25.0.4.1 (Microsoft)"
 )
 @Component

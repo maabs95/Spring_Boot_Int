@@ -2,7 +2,7 @@ package com.users.controller;
 
 import com.users.dto.UsersDto;
 import com.users.service.UsersService;
-import com.util.dto.ResponseDto;
+import com.util.common.dto.ResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;

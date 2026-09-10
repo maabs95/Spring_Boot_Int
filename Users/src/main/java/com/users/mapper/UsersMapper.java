@@ -1,7 +1,7 @@
 package com.users.mapper;
 
 import com.users.dto.UsersDto;
-import com.util.model.Users;
+import com.util.common.database.model.Users;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

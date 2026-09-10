@@ -10,8 +10,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EnableJpaAuditing
 @ComponentScan(basePackages = {"com.users", "com.util"})
-@EnableJpaRepositories(basePackages = "com.util.repository")
-@EntityScan(basePackages = "com.util.model")
+@EnableJpaRepositories(basePackages = "com.util.common.database.repository")
+@EntityScan(basePackages = "com.util.common.database.model")
 public class UsersMain {
     static void main(String[] args) {
         SpringApplication.run(UsersMain.class, args);
