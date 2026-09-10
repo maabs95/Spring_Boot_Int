@@ -152,3 +152,5 @@
 2026-09-10 15:13:09.493 [INFO] RES | 409 | {"data":null,"message":"Username 'AliceSmith' is already taken!","status":"FAILED"}
 2026-09-10 15:13:24.701 [INFO] REQ | GET | /users/username/EvanWright | 
 2026-09-10 15:13:24.701 [INFO] RES | 500 | {"data":null,"message":"403 Forbidden: \"{\"data\":null,\"message\":\"User is not active.\",\"status\":\"FAILED\"}\"","status":"FAILED"}
+2026-09-10 15:23:20.668 [INFO] REQ | GET | /users/username/EvanWright | 
+2026-09-10 15:23:20.668 [INFO] RES | 502 | {"data":null,"message":"Third-party API failed with status 403 FORBIDDEN: {\"data\":null,\"message\":\"User is not active.\",\"status\":\"FAILED\"}","status":"FAILED"}

@@ -28,3 +28,5 @@
 2026-09-10 11:51:14.913 [INFO] RES | 403 | {"data":null,"message":"User is not active.","status":"FAILED"}
 2026-09-10 15:13:24.670 [INFO] REQ | GET | /department/getByUsername | 
 2026-09-10 15:13:24.670 [INFO] RES | 403 | {"data":null,"message":"User is not active.","status":"FAILED"}
+2026-09-10 15:23:20.613 [INFO] REQ | GET | /department/getByUsername | 
+2026-09-10 15:23:20.614 [INFO] RES | 403 | {"data":null,"message":"User is not active.","status":"FAILED"}

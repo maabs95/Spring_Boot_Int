@@ -31,6 +31,11 @@ public class GlobalHandlerException {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(setResponse(e.getMessage()));
     }
 
+    @ExceptionHandler(ThirdPartyApiException.class)
+    public ResponseEntity<ResponseDto> handleThirdPartyApiException(ThirdPartyApiException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body(setResponse(ex.getMessage()));
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ResponseDto> handleException(Exception e){
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(setResponse(e.getMessage()));

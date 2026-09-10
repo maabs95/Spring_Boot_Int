@@ -8,6 +8,7 @@ import com.util.common.database.model.Users;
 import com.util.common.database.repository.UsersRepository;
 import com.users.service.UsersService;
 import com.util.exception.DuplicateResourceException;
+import com.util.exception.ThirdPartyApiException;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.ParameterizedTypeReference;
@@ -17,7 +18,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestClient;
+import org.springframework.web.client.RestClientException;
+import org.springframework.web.client.RestClientResponseException;
 
 import java.util.UUID;
 
@@ -86,6 +90,7 @@ public class UsersServiceImpl implements UsersService {
     }
 
     private DepartmentDto callThirdPartyApi(String userName) {
+        try{
             ApiResponse<DepartmentDto> response = mtlsRestClient.get()
                     .uri(uriBuilder -> uriBuilder
                             .path("/department/getByUsername")
@@ -109,5 +114,14 @@ public class UsersServiceImpl implements UsersService {
             }
 
             return departmentDto;
+        } catch (RestClientResponseException e) {
+            throw new ThirdPartyApiException(
+                    "Third-party API failed with status " + e.getStatusCode() + ": " + e.getResponseBodyAsString(), e
+            );
+        } catch (ResourceAccessException e) {
+            throw new ThirdPartyApiException("Failed to connect via mTLS to third-party service: " + e.getMessage(), e);
+        } catch (RestClientException e) {
+            throw new ThirdPartyApiException("Unexpected client error calling third-party API", e);
+        }
     }
 }
