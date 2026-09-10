@@ -1,14 +1,14 @@
 package com.users.mapper;
 
 import com.users.dto.UsersDto;
-import com.users.model.Users;
+import com.util.model.Users;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-09-10T00:43:28+0800",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 25.0.1 (Oracle Corporation)"
+    date = "2026-09-10T10:10:33+0800",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 25.0.4.1 (Microsoft)"
 )
 @Component
 public class UsersMapperImpl implements UsersMapper {
@@ -24,6 +24,7 @@ public class UsersMapperImpl implements UsersMapper {
         usersDto.setUserId( user.getUserId() );
         usersDto.setUserName( user.getUserName() );
         usersDto.setEmail( user.getEmail() );
+        usersDto.setActive( user.isActive() );
         usersDto.setCreatedDate( user.getCreatedDate() );
         usersDto.setUpdatedDate( user.getUpdatedDate() );
 
@@ -40,6 +41,7 @@ public class UsersMapperImpl implements UsersMapper {
 
         users.setUserName( usersDto.getUserName() );
         users.setEmail( usersDto.getEmail() );
+        users.setActive( usersDto.isActive() );
         users.setCreatedDate( usersDto.getCreatedDate() );
         users.setUpdatedDate( usersDto.getUpdatedDate() );
 

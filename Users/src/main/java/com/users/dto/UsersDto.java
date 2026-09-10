@@ -16,6 +16,7 @@ public class UsersDto {
     private UUID userId;
     private String userName;
     private String email;
+    private boolean active;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 }

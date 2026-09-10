@@ -7,16 +7,27 @@ The database is MSSQL.
 
 Below are the data samples can be used for the run:
 
-INSERT INTO [dbo].[Users] ([UserID], [UserName], [Email], [CreatedDate], [UpdatedDate])
+CREATE TABLE dbo.Users (
+    UserID UNIQUEIDENTIFIER DEFAULT NEWSEQUENTIALID() NOT NULL,
+    UserName NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(255) NOT NULL,
+    Active BIT NOT NULL,
+    CreatedDate DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    UpdatedDate DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    
+    CONSTRAINT PK_Users PRIMARY KEY CLUSTERED (UserID)
+);
+
+INSERT INTO [dbo].[Users] ([UserID], [UserName], [Email], [Active], [CreatedDate], [UpdatedDate])
 VALUES
-(NEWID(), 'AliceSmith', 'alice.smith@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'BobJohnson', 'bob.johnson@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'CharlieBrown', 'charlie.brown@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'DianaPrince', 'diana.prince@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'EvanWright', 'evan.wright@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'FionaGallagher', 'fiona.g@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'GeorgeClark', 'george.clark@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'HannahAbbott', 'hannah.a@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'IanMalcolm', 'ian.malcolm@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'JuliaRoberts', 'julia.roberts@example.com', SYSUTCDATETIME(), SYSUTCDATETIME()),
-(NEWID(), 'KevinBacon', 'kevin.bacon@example.com', SYSUTCDATETIME(), SYSUTCDATETIME());
+(NEWID(), 'AliceSmith', 'alice.smith@example.com', 1, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'BobJohnson', 'bob.johnson@example.com', 0, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'CharlieBrown', 'charlie.brown@example.com', 1, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'DianaPrince', 'diana.prince@example.com', 1, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'EvanWright', 'evan.wright@example.com', 0, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'FionaGallagher', 'fiona.g@example.com', 1, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'GeorgeClark', 'george.clark@example.com', 1, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'HannahAbbott', 'hannah.a@example.com', 0, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'IanMalcolm', 'ian.malcolm@example.com', 1, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'JuliaRoberts', 'julia.roberts@example.com', 1, SYSUTCDATETIME(), SYSUTCDATETIME()),
+(NEWID(), 'KevinBacon', 'kevin.bacon@example.com', 0, SYSUTCDATETIME(), SYSUTCDATETIME());

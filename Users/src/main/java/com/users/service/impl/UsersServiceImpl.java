@@ -4,8 +4,8 @@ import com.users.dto.ApiResponse;
 import com.users.dto.DepartmentDto;
 import com.users.dto.UsersDto;
 import com.users.mapper.UsersMapper;
-import com.users.model.Users;
-import com.users.repository.UsersRepository;
+import com.util.model.Users;
+import com.util.repository.UsersRepository;
 import com.users.service.UsersService;
 import com.util.exception.DuplicateResourceException;
 import jakarta.persistence.EntityNotFoundException;
@@ -18,7 +18,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-import org.springframework.web.client.RestClientException;
 
 import java.util.UUID;
 
@@ -49,6 +48,7 @@ public class UsersServiceImpl implements UsersService {
                 .map(existingUser -> {
                     existingUser.setUserName(usersDto.getUserName());
                     existingUser.setEmail(usersDto.getEmail());
+                    existingUser.setActive(usersDto.isActive());
                     Users updatedUser = userRepository.save(existingUser);
                     return usersMapper.toDto(updatedUser);
                 }).orElseThrow(() -> new EntityNotFoundException("User not found"));

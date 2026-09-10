@@ -1,13 +1,10 @@
 package com.users.controller;
 
-import com.users.dto.DepartmentDto;
 import com.users.dto.UsersDto;
-import com.users.model.Users;
 import com.users.service.UsersService;
 import com.util.dto.ResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

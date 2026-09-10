@@ -16,6 +16,11 @@ public class GlobalHandlerException {
         return response;
     }
 
+    @ExceptionHandler(UserInactiveException.class)
+    public ResponseEntity<ResponseDto> handleUserInactiveException(UserInactiveException e){
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(setResponse(e.getMessage()));
+    }
+
     @ExceptionHandler(DuplicateResourceException.class)
     public ResponseEntity<ResponseDto> handleDuplicateResourceException(DuplicateResourceException e) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(setResponse(e.getMessage()));

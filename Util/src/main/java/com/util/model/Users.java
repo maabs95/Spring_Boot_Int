@@ -1,4 +1,4 @@
-package com.users.model;
+package com.util.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -29,6 +29,9 @@ public class Users {
 
     @Column(name = "Email", length = 255, nullable = false)
     private String email;
+
+    @Column(name = "Active", nullable = false)
+    private boolean active;
 
     @CreatedDate
     @Column(name = "CreatedDate", updatable = false, nullable = false)

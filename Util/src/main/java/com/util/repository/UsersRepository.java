@@ -1,13 +1,15 @@
-package com.users.repository;
+package com.util.repository;
 
-import com.users.model.Users;
+import com.util.model.Users;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 import java.util.UUID;
 
+@Repository
 public interface UsersRepository extends JpaRepository<Users, UUID> {
     Optional<Users> findByUserName(String userName);
     Page<Users> findByUserNameContainingIgnoreCase(String userName, Pageable pageable);

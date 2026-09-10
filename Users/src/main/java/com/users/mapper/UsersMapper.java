@@ -1,8 +1,7 @@
 package com.users.mapper;
 
 import com.users.dto.UsersDto;
-import com.users.model.Users;
-import org.apache.catalina.User;
+import com.util.model.Users;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
