@@ -1,5 +1,6 @@
-The project used mTLS, no sample API for Department module since it can only be accessed by Users module.
+The project used mTLS, no sample API for Department module since it can only be accessed by Users module. Postman collection can be referred to Users.postman_collection.json
 In order to test endpoint from Department module, Users module is needed, unless the mTLS is disabled. Please use endpoint /username/{userName} in Users module to test Department module.
+
 "Disclaimer: For evaluation convenience, the test keystores and truststores are committed inside the src/main/resources folder. In a production cloud deployment, these credentials would be stored in a secure secret manager (like HashiCorp Vault or AWS Secrets Manager) and injected via external file mounts or environment variables."
 
 The database is MSSQL.
