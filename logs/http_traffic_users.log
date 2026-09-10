@@ -1,0 +1,22 @@
+2026-09-10 01:06:45.434 [INFO] REQ | GET | /users/username/paa | 
+2026-09-10 01:06:45.435 [INFO] RES | 500 | {"data":null,"message":"JDBC exception executing SQL [Invalid column name 'user_name'.] [select u1_0.userid,u1_0.created_date,u1_0.email,u1_0.updated_date,u1_0.user_name from users u1_0 where u1_0.user_name=?]; SQL [select u1_0.userid,u1_0.created_date,u1_0.email,u1_0.updated_date,u1_0.user_name from users u1_0 where u1_0.user_name=?]","status":"FAILED"}
+2026-09-10 01:09:30.004 [INFO] REQ | GET | /users/username/paa | 
+2026-09-10 01:09:30.004 [INFO] RES | 500 | {"data":null,"message":"JDBC exception executing SQL [Invalid column name 'user_name'.] [select u1_0.userid,u1_0.created_date,u1_0.email,u1_0.updated_date,u1_0.user_name from users u1_0 where u1_0.user_name=?]; SQL [select u1_0.userid,u1_0.created_date,u1_0.email,u1_0.updated_date,u1_0.user_name from users u1_0 where u1_0.user_name=?]","status":"FAILED"}
+2026-09-10 01:10:31.291 [INFO] REQ | GET | /users/username/paa | 
+2026-09-10 01:10:31.292 [INFO] RES | 500 | {"data":null,"message":"User not found with username: paa","status":"FAILED"}
+2026-09-10 01:12:15.981 [INFO] REQ | GET | /users/username/AliceSmith | 
+2026-09-10 01:12:15.981 [INFO] RES | 200 | {"data":{"userName":null,"name":null,"description":null},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 01:14:32.112 [INFO] REQ | GET | /users/username/AliceSmith | 
+2026-09-10 01:14:32.112 [INFO] RES | 200 | {"data":{"userName":null,"name":null,"description":null},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 01:22:05.241 [INFO] REQ | GET | /users/username/AliceSmith | 
+2026-09-10 01:22:05.241 [INFO] RES | 200 | {"data":{"userName":"AliceSmith","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 08:15:03.140 [INFO] REQ | GET | /users/username/AliceSmithsss | 
+2026-09-10 08:15:03.140 [INFO] RES | 500 | {"data":null,"message":"User not found with username: AliceSmithsss","status":"FAILED"}
+2026-09-10 08:15:56.703 [INFO] REQ | GET | /users/username | 
+2026-09-10 08:15:56.703 [INFO] RES | 500 | {"data":null,"message":"Request method 'GET' is not supported","status":"FAILED"}
+2026-09-10 08:16:02.441 [INFO] REQ | GET | /users/username/ | 
+2026-09-10 08:16:02.441 [INFO] RES | 500 | {"data":null,"message":"No static resource users/username for request '/users/username/'.","status":"FAILED"}
+2026-09-10 08:16:54.573 [INFO] REQ | GET | /users/username/AliceSmith | 
+2026-09-10 08:16:54.573 [INFO] RES | 500 | {"data":null,"message":"404 Not Found: \"{\"data\":null,\"message\":\"Username cannot be empty\",\"status\":\"FAILED\"}\"","status":"FAILED"}
+2026-09-10 08:17:01.964 [INFO] REQ | GET | /users/username/AliceSmith | 
+2026-09-10 08:17:01.964 [INFO] RES | 500 | {"data":null,"message":"404 Not Found: \"{\"data\":null,\"message\":\"Username cannot be empty\",\"status\":\"FAILED\"}\"","status":"FAILED"}

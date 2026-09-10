@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Include default Spring Boot console logging configuration -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+    <!-- Root logger handles standard application logs (Console only) -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Appender for the dedicated HTTP Traffic Log File -->
+    <appender name="HTTP_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/http_traffic_department.log</file>
+        <encoder>
+            <!-- Simple pattern: Timestamp | Level | Log Message -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- Roll over daily or when file reaches 10MB -->
+            <fileNamePattern>logs/archived/http_traffic-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Direct the "http-logger" exclusively to the HTTP_FILE appender -->
+    <!-- additivity="false" prevents these logs from appearing in the CONSOLE -->
+    <logger name="http-logger" level="INFO" additivity="false">
+        <appender-ref ref="HTTP_FILE" />
+    </logger>
+</configuration>

@@ -1,0 +1,21 @@
+server:
+  port: 8081
+  ssl:
+    bundle: server-mtls-bundle
+    client-auth: need
+
+spring:
+  ssl:
+    bundle:
+      jks:
+        server-mtls-bundle:
+          key:
+            alias: server
+          keystore:
+            location: classpath:server-keystore.p12
+            password: changeit
+            type: PKCS12
+          truststore:
+            location: classpath:server-truststore.p12
+            password: changeit
+            type: PKCS12

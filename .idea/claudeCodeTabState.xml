@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ClaudeCodeTabState">
+    <option name="tabSessions">
+      <map>
+        <entry key="0">
+          <value>
+            <TabSessionState>
+              <option name="provider" value="codex" />
+              <option name="sessionId" value="01a0873f-e155-7b80-8faf-eda34c5de961" />
+              <option name="cwd" value="C:\Users\aiman\Documents\Java_Project\spring_boot_int\Spring_Boot_Int" />
+              <option name="model" value="gpt-6-astra" />
+              <option name="permissionMode" value="bypassPermissions" />
+            </TabSessionState>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
