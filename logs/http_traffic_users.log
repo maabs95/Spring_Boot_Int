@@ -20,3 +20,117 @@
 2026-09-10 08:16:54.573 [INFO] RES | 500 | {"data":null,"message":"404 Not Found: \"{\"data\":null,\"message\":\"Username cannot be empty\",\"status\":\"FAILED\"}\"","status":"FAILED"}
 2026-09-10 08:17:01.964 [INFO] REQ | GET | /users/username/AliceSmith | 
 2026-09-10 08:17:01.964 [INFO] RES | 500 | {"data":null,"message":"404 Not Found: \"{\"data\":null,\"message\":\"Username cannot be empty\",\"status\":\"FAILED\"}\"","status":"FAILED"}
+2026-09-10 10:34:51.521 [INFO] REQ | POST | /users | {
+  "userName": "AliceSmith",
+  "email": "alice.smith@example.com",
+  "active": true
+}
+2026-09-10 10:34:51.522 [INFO] RES | 500 | {"data":null,"message":"not-null property references a null or transient value for entity com.util.common.database.model.Users.createdDate","status":"FAILED"}
+2026-09-10 10:37:58.115 [INFO] REQ | POST | /users | {
+  "userName": "AliceSmith",
+  "email": "alice.smith@example.com",
+  "active": true
+}
+2026-09-10 10:37:58.115 [INFO] RES | 200 | {"data":{"userId":"236b920e-0dcb-40b0-b9a6-ecf9523c1d44","userName":"AliceSmith","email":"alice.smith@example.com","active":true,"createdDate":"2026-09-10T10:37:58.0655194","updatedDate":"2026-09-10T10:37:58.0655194"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 10:38:14.609 [INFO] REQ | PUT | /users/00000000-0000-0000-0000-000000000000 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:38:14.609 [INFO] RES | 500 | {"data":null,"message":"User not found","status":"FAILED"}
+2026-09-10 10:39:00.754 [INFO] REQ | PUT | /users/00000000-0000-0000-0000-000000000000 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:39:00.754 [INFO] RES | 500 | {"data":null,"message":"User not found","status":"FAILED"}
+2026-09-10 10:39:26.764 [INFO] REQ | PUT | /users/00000000-0000-0000-0000-000000000000 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:39:26.764 [INFO] RES | 500 | {"data":null,"message":"User not found","status":"FAILED"}
+2026-09-10 10:43:33.881 [INFO] REQ | PUT | /users/00000000-0000-0000-0000-000000000000 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:43:33.881 [INFO] RES | 500 | {"data":null,"message":"User not found","status":"FAILED"}
+2026-09-10 10:45:23.761 [INFO] REQ | PUT | /users/00000000-0000-0000-0000-000000000000 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:45:23.761 [INFO] RES | 500 | {"data":null,"message":"User not found","status":"FAILED"}
+2026-09-10 10:45:35.827 [INFO] REQ | PUT | /users/00000000-0000-0000-0000-000000000000 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:45:35.827 [INFO] RES | 500 | {"data":null,"message":"User not found","status":"FAILED"}
+2026-09-10 10:49:36.865 [INFO] REQ | PUT | /users/00000000-0000-0000-0000-000000000000 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:49:36.867 [INFO] RES | 500 | {"data":null,"message":"User not found","status":"FAILED"}
+2026-09-10 10:53:33.489 [INFO] REQ | PUT | /users/00000000-0000-0000-0000-000000000000 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:53:33.490 [INFO] RES | 500 | {"data":null,"message":"User not found","status":"FAILED"}
+2026-09-10 10:53:33.510 [INFO] REQ | PUT | /users/236B920E-0DCB-40B0-B9A6-ECF9523C1D44 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:53:33.510 [INFO] RES | 200 | {"data":{"userId":"236b920e-0dcb-40b0-b9a6-ecf9523c1d44","userName":"AliceSmithUpdated","email":"alice.updated@example.com","active":true,"createdDate":"2026-09-10T10:37:58.0655194","updatedDate":"2026-09-10T10:37:58.0655194"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 10:53:42.332 [INFO] REQ | PUT | /users/236B920E-0DCB-40B0-B9A6-ECF9523C1D44 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 10:53:42.333 [INFO] RES | 200 | {"data":{"userId":"236b920e-0dcb-40b0-b9a6-ecf9523c1d44","userName":"AliceSmithUpdated","email":"alice.updated@example.com","active":true,"createdDate":"2026-09-10T10:37:58.0655194","updatedDate":"2026-09-10T10:53:33.4814774"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 10:54:13.660 [INFO] REQ | GET | /users | 
+2026-09-10 10:54:13.660 [INFO] RES | 200 | {"data":{"content":[{"userId":"236b920e-0dcb-40b0-b9a6-ecf9523c1d44","userName":"AliceSmithUpdated","email":"alice.updated@example.com","active":true,"createdDate":"2026-09-10T10:37:58.0655194","updatedDate":"2026-09-10T10:53:33.4814774"}],"empty":false,"first":true,"last":true,"number":0,"numberOfElements":1,"pageable":{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false},"size":10,"sort":{"empty":false,"sorted":true,"unsorted":false},"totalElements":1,"totalPages":1},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 10:54:20.469 [INFO] REQ | GET | /users | 
+2026-09-10 10:54:20.469 [INFO] RES | 200 | {"data":{"content":[{"userId":"236b920e-0dcb-40b0-b9a6-ecf9523c1d44","userName":"AliceSmithUpdated","email":"alice.updated@example.com","active":true,"createdDate":"2026-09-10T10:37:58.0655194","updatedDate":"2026-09-10T10:53:33.4814774"}],"empty":false,"first":true,"last":true,"number":0,"numberOfElements":1,"pageable":{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false},"size":10,"sort":{"empty":false,"sorted":true,"unsorted":false},"totalElements":1,"totalPages":1},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 10:54:26.702 [INFO] REQ | GET | /users/username/AliceSmith | 
+2026-09-10 10:54:26.703 [INFO] RES | 500 | {"data":null,"message":"User not found with username: AliceSmith","status":"FAILED"}
+2026-09-10 10:54:41.420 [INFO] REQ | GET | /users/username/AliceSmith | 
+2026-09-10 10:54:41.421 [INFO] RES | 500 | {"data":null,"message":"User not found with username: AliceSmith","status":"FAILED"}
+2026-09-10 10:55:30.449 [INFO] REQ | GET | /users/username/AliceSmithUpdated | 
+2026-09-10 10:55:30.449 [INFO] RES | 200 | {"data":{"userName":"AliceSmithUpdated","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:01:18.268 [INFO] REQ | POST | /users | {
+  "userName": "AliceSmith",
+  "email": "alice.smith@example.com",
+  "active": true
+}
+2026-09-10 11:01:18.268 [INFO] RES | 200 | {"data":{"userId":"ed371465-021f-4671-bf44-28505561d6c4","userName":"AliceSmith","email":"alice.smith@example.com","active":true,"createdDate":"2026-09-10T11:01:18.2144912","updatedDate":"2026-09-10T11:01:18.2144912"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:01:40.973 [INFO] REQ | PUT | /users/username/AliceSmith | 
+2026-09-10 11:01:40.973 [INFO] RES | 500 | {"data":null,"message":"Request method 'PUT' is not supported","status":"FAILED"}
+2026-09-10 11:03:37.716 [INFO] REQ | POST | /users | {
+  "userName": "AliceSmith",
+  "email": "alice.smith@example.com",
+  "active": true
+}
+2026-09-10 11:03:37.717 [INFO] RES | 409 | {"data":null,"message":"Username 'AliceSmith' is already taken!","status":"FAILED"}
+2026-09-10 11:06:20.720 [INFO] REQ | PUT | /users/ED371465-021F-4671-BF44-28505561D6C4 | {
+  "userName": "AliceSmithUpdated",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 11:06:20.721 [INFO] RES | 500 | {"data":null,"message":"Username 'AliceSmithUpdated' is already taken.","status":"FAILED"}
+2026-09-10 11:06:33.166 [INFO] REQ | PUT | /users/ED371465-021F-4671-BF44-28505561D6C4 | {
+  "userName": "AliceSmith",
+  "email": "alice.updated@example.com",
+  "active": true
+}
+2026-09-10 11:06:33.166 [INFO] RES | 200 | {"data":{"userId":"ed371465-021f-4671-bf44-28505561d6c4","userName":"AliceSmith","email":"alice.updated@example.com","active":true,"createdDate":"2026-09-10T11:01:18.2144912","updatedDate":"2026-09-10T11:01:18.2144912"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:06:47.967 [INFO] REQ | GET | /users | 
+2026-09-10 11:06:47.967 [INFO] RES | 200 | {"data":{"content":[{"userId":"ed371465-021f-4671-bf44-28505561d6c4","userName":"AliceSmith","email":"alice.updated@example.com","active":true,"createdDate":"2026-09-10T11:01:18.2144912","updatedDate":"2026-09-10T11:06:33.1437625"},{"userId":"236b920e-0dcb-40b0-b9a6-ecf9523c1d44","userName":"AliceSmithUpdated","email":"alice.updated@example.com","active":true,"createdDate":"2026-09-10T10:37:58.0655194","updatedDate":"2026-09-10T10:53:33.4814774"}],"empty":false,"first":true,"last":true,"number":0,"numberOfElements":2,"pageable":{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false},"size":10,"sort":{"empty":false,"sorted":true,"unsorted":false},"totalElements":2,"totalPages":1},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:07:01.539 [INFO] REQ | GET | /users/username/AliceSmith | 
+2026-09-10 11:07:01.539 [INFO] RES | 200 | {"data":{"userName":"AliceSmith","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:07:19.676 [INFO] REQ | GET | /users/username/AliceSmithUpdated | 
+2026-09-10 11:07:19.676 [INFO] RES | 200 | {"data":{"userName":"AliceSmithUpdated","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}

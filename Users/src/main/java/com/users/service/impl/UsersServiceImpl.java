@@ -44,14 +44,19 @@ public class UsersServiceImpl implements UsersService {
     @Override
     @Transactional
     public UsersDto updateUser(UUID id, UsersDto usersDto) {
-        return userRepository.findById(id)
-                .map(existingUser -> {
-                    existingUser.setUserName(usersDto.getUserName());
-                    existingUser.setEmail(usersDto.getEmail());
-                    existingUser.setActive(usersDto.isActive());
-                    Users updatedUser = userRepository.save(existingUser);
-                    return usersMapper.toDto(updatedUser);
-                }).orElseThrow(() -> new EntityNotFoundException("User not found"));
+        Users existingUser = userRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
+
+        if (userRepository.existsByUserNameAndUserIdNot(usersDto.getUserName(), id)) {
+            throw new IllegalArgumentException("Username '" + usersDto.getUserName() + "' is already taken.");
+        }
+
+        existingUser.setUserName(usersDto.getUserName());
+        existingUser.setEmail(usersDto.getEmail());
+        existingUser.setActive(usersDto.isActive());
+
+        Users updatedUser = userRepository.save(existingUser);
+        return usersMapper.toDto(updatedUser);
     }
 
     @Override

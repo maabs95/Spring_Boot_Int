@@ -12,3 +12,9 @@
 2026-09-10 08:16:54.557 [INFO] RES | 404 | {"data":null,"message":"Username cannot be empty","status":"FAILED"}
 2026-09-10 08:17:01.962 [INFO] REQ | GET | /department/getByUsername | 
 2026-09-10 08:17:01.962 [INFO] RES | 404 | {"data":null,"message":"Username cannot be empty","status":"FAILED"}
+2026-09-10 10:55:30.429 [INFO] REQ | GET | /department/getByUsername | 
+2026-09-10 10:55:30.431 [INFO] RES | 200 | {"data":{"userName":"AliceSmithUpdated","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:07:01.523 [INFO] REQ | GET | /department/getByUsername | 
+2026-09-10 11:07:01.523 [INFO] RES | 200 | {"data":{"userName":"AliceSmith","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}
+2026-09-10 11:07:19.672 [INFO] REQ | GET | /department/getByUsername | 
+2026-09-10 11:07:19.672 [INFO] RES | 200 | {"data":{"userName":"AliceSmithUpdated","name":"IT","description":"Handle Infra"},"message":"SUCCESS","status":"SUCCESS"}

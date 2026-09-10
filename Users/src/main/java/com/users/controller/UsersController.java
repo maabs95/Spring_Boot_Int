@@ -32,8 +32,8 @@ public class UsersController {
         return ResponseEntity.ok(setResponseDto(savedUser));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<ResponseDto> updateUser(@PathVariable UUID id, @RequestBody UsersDto usersDto) {
+    @PutMapping("/{userId}")
+    public ResponseEntity<ResponseDto> updateUser(@PathVariable("userId") UUID id, @RequestBody UsersDto usersDto) {
         return ResponseEntity.ok(setResponseDto(usersService.updateUser(id, usersDto)));
     }
 
